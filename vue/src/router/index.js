@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from '../view/Login.vue';
 import Register from '../view/Register.vue';
 import Dashboard from '../view/Dashboard.vue';
+import Surveys from '../view/Surveys.vue';
+import DefaultLayout from '../components/DefaultLayout.vue';
 
 const routes = [
     {
@@ -17,8 +19,20 @@ const routes = [
     },
     {
         path: '/',
-        name: 'Dashboard',
-        component: Dashboard
+        redirect: '/dashboard',
+        component: DefaultLayout,
+        children: [
+            {
+                path: '/dashboard',
+                name: 'Dashboard',
+                component: Dashboard
+            },
+            {
+                path: '/surveys',
+                name: 'Surveys',
+                component: Surveys
+            }
+        ]
     },
 ];
 
