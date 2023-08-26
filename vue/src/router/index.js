@@ -5,19 +5,10 @@ import Register from '../view/Register.vue';
 import Dashboard from '../view/Dashboard.vue';
 import Surveys from '../view/Surveys.vue';
 import DefaultLayout from '../components/DefaultLayout.vue';
+import AuthLayout from '../components/AuthLayout.vue';
 import store from '../store';
 
 const routes = [
-    {
-        path: '/login',
-        name: 'Login',
-        component: Login
-    },
-    {
-        path: '/register',
-        name: 'Register',
-        component: Register
-    },
     {
         path: '/',
         redirect: '/dashboard',
@@ -36,6 +27,26 @@ const routes = [
             }
         ]
     },
+
+    {
+        path: '/auth',
+        redirect: '/login',
+        name: 'Auth',
+        component: AuthLayout,
+        meta: { isGuest: true },
+        children: [
+            {
+                path: '/login',
+                name: 'Login',
+                component: Login
+            },
+            {
+                path: '/register',
+                name: 'Register',
+                component: Register
+            },
+        ]
+    }
 ];
 
 const router = createRouter({
@@ -44,13 +55,14 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    // to and from are both route objects. must call `next`
 
     var tokenExist = store.state.user.token;
 
     if (to.meta.requiresAuth && !tokenExist) {
         next({ name: 'Login' });
-    } else if (tokenExist && (to.name === 'Login' || to.name === 'Register')) {
+    }
+    // else if (tokenExist && (to.name === 'Login' || to.name === 'Register')) {
+    else if (tokenExist && (to.meta.isGuest)) {
         next({ name: 'Dashboard' });
     }
     else {
