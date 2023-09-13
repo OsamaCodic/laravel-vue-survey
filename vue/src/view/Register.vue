@@ -9,6 +9,20 @@
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form class="space-y-6" @submit="register">
+                
+                <div v-if="errorMsg" class="flex items-center justify-between py-3 px-5 bg-red-500 text-white rounded">
+                    <ul>
+                        <li v-for="(messages, field) in errorMsg" :key="field">
+                          {{ messages[0] }}
+                        </li>
+                    </ul>
+                    <span @click="errorMsg = ''" class="w-8 h-8 flex items-center justify-center rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                </div>
+
                 <div>
                     <label for="fullname" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
                     <input id="fullname" name="fullname" type="text" autocomplete="fullname" v-model="user.name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
@@ -48,9 +62,10 @@
 
 import store from '../store';
 import { useRouter } from 'vue-router';
+import { ref } from 'vue';
 
+let errorMsg = ref('');
 const router = useRouter();
-
 const user = {
     name: '',
     email: '',
@@ -65,6 +80,10 @@ function register(e) {
         router.push({
             name: 'Dashboard'            
         });
+    })
+    .catch(err => {
+        console.warn(err);
+        errorMsg.value = err.response.data.errors
     })
 }
 
