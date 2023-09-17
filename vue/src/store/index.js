@@ -9,7 +9,7 @@ const tempSurveys = [
         slug: 'monkey-survey',
         status: 'draft',
         image: 'http://via.placeholder.com/640x360',
-        description: 'abc',
+        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur quisque, tempus tortor fermentum posuere felis mattis eros eleifend tempor, tincidunt risus porta elementum at hendrerit neque per. Viverra nunc conubia cras venenatis magna feugiat dignissim at lobortis mattis, auctor nullam pretium proin et inceptos parturient felis magnis, taciti semper pellentesque laoreet a praesent tortor tempus quam. Facilisis dui non primis cursus sagittis conubia mauris, pretium velit massa potenti sollicitudin ante, fermentum sodales phasellus ut rutrum tristique. Leo et mus sociis litora montes velit ridiculus semper lacinia fusce magnis, risus aliquam purus commodo dictum non dignissim ultricies eu. Metus eget facilisi ullamcorper proin accumsan justo tellus aliquam lectus sagittis, eu eleifend turpis nostra per senectus tortor netus ultricies, arcu pharetra risus montes rutrum nullam himenaeos mi feugiat.',
         created_at: '2021-12-20 14:00:00',
         updated_at: '2021-12-20 17:00:00',
         expire_date: '2021-12-27 14:00:00',
@@ -21,7 +21,7 @@ const tempSurveys = [
                 question: 'From which country are you?',
                 description: null,
                 data: {
-                    Options: [
+                    options: [
                         {uuid:'1bc', text: "USA"},
                         {uuid:'3bv', text: "Ind"},
                         {uuid:'43f', text: "Pak"},
@@ -35,7 +35,7 @@ const tempSurveys = [
                 question: 'What is your skills?',
                 description: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit lobortis nullam nibh dis ut.',
                 data: {
-                    Options: [
+                    options: [
                         {uuid:'5bc', text: "PHP"},
                         {uuid:'hbv', text: "JS"},
                         {uuid:'47f', text: "CSS"},
@@ -49,7 +49,7 @@ const tempSurveys = [
                 question: 'Which framework do you referred?',
                 description: 'fansectetur adipiscing, elit lobortis nullam nibh dis ut,ipsum dolor sit amet c',
                 data: {
-                    Options: [
+                    options: [
                         {uuid:'6bc', text: "Laravel"},
                         {uuid:'hbv', text: "NextJS"},
                         {uuid:'4jf', text: "VueJS"},
@@ -61,9 +61,9 @@ const tempSurveys = [
                 id: 4,
                 type: 'radio',
                 question: 'Please select your gender?',
-                description: 'lit lobortis nullam nibh dis ut,ipsum dolor sit amet c',
+                description: 'Its import to get basic information for this survey',
                 data: {
-                    Options: [
+                    options: [
                         {uuid:'aaa', text: "Male"},
                         {uuid:'bbb', text: "Female"},
                     ]
@@ -91,7 +91,7 @@ const tempSurveys = [
         slug: 'larave-survey',
         status: 'active',
         image: 'http://via.placeholder.com/640x360',
-        description: 'xyz',
+        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur quisque, tempus tortor fermentum posuere felis mattis eros eleifend tempor, tincidunt risus porta elementum at hendrerit neque per. Viverra nunc conubia cras venenatis magna feugiat dignissim at lobortis mattis, auctor nullam pretium proin et inceptos parturient felis magnis, taciti semper pellentesque laoreet a praesent tortor tempus quam. Facilisis dui non primis cursus sagittis conubia mauris, pretium velit massa potenti sollicitudin ante, fermentum sodales phasellus ut rutrum tristique. Leo et mus sociis litora montes velit ridiculus semper lacinia fusce magnis, risus aliquam purus commodo dictum non dignissim ultricies eu. Metus eget facilisi ullamcorper proin accumsan justo tellus aliquam lectus sagittis, eu eleifend turpis nostra per senectus tortor netus ultricies, arcu pharetra risus montes rutrum nullam himenaeos mi feugiat.',
         created_at: '2021-12-20 14:00:00',
         updated_at: '2021-12-20 17:00:00',
         expire_date: '2021-12-27 14:00:00',
@@ -103,7 +103,7 @@ const tempSurveys = [
         slug: 'vue3-survey',
         status: 'active',
         image: 'http://via.placeholder.com/640x360',
-        description: 'andsdjknwedio',
+        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur quisque, tempus tortor fermentum posuere felis mattis eros eleifend tempor, tincidunt risus porta elementum at hendrerit neque per. Viverra nunc conubia cras venenatis magna feugiat dignissim at lobortis mattis, auctor nullam pretium proin et inceptos parturient felis magnis, taciti semper pellentesque laoreet a praesent tortor tempus quam. Facilisis dui non primis cursus sagittis conubia mauris, pretium velit massa potenti sollicitudin ante, fermentum sodales phasellus ut rutrum tristique. Leo et mus sociis litora montes velit ridiculus semper lacinia fusce magnis, risus aliquam purus commodo dictum non dignissim ultricies eu. Metus eget facilisi ullamcorper proin accumsan justo tellus aliquam lectus sagittis, eu eleifend turpis nostra per senectus tortor netus ultricies, arcu pharetra risus montes rutrum nullam himenaeos mi feugiat.',
         created_at: '2021-12-20 14:00:00',
         updated_at: '2021-12-20 17:00:00',
         expire_date: '2021-12-27 14:00:00',
@@ -115,7 +115,7 @@ const tempSurveys = [
         slug: 'ailwind-survey',
         status: 'active',
         image: 'http://via.placeholder.com/640x360',
-        description: 'andsdjknwedio',
+        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur quisque, tempus tortor fermentum posuere felis mattis eros eleifend tempor, tincidunt risus porta elementum at hendrerit neque per. Viverra nunc conubia cras venenatis magna feugiat dignissim at lobortis mattis, auctor nullam pretium proin et inceptos parturient felis magnis, taciti semper pellentesque laoreet a praesent tortor tempus quam. Facilisis dui non primis cursus sagittis conubia mauris, pretium velit massa potenti sollicitudin ante, fermentum sodales phasellus ut rutrum tristique. Leo et mus sociis litora montes velit ridiculus semper lacinia fusce magnis, risus aliquam purus commodo dictum non dignissim ultricies eu. Metus eget facilisi ullamcorper proin accumsan justo tellus aliquam lectus sagittis, eu eleifend turpis nostra per senectus tortor netus ultricies, arcu pharetra risus montes rutrum nullam himenaeos mi feugiat.',
         created_at: '2021-12-20 14:00:00',
         updated_at: '2021-12-20 17:00:00',
         expire_date: '2021-12-27 14:00:00',
@@ -130,6 +130,7 @@ const store = createStore({
             token: sessionStorage.getItem("TOKEN")
         },
         surveys: [...tempSurveys],
+        questionTypes: ["select", "radio", "checkbox", "text", "textarea"],
     },
     getters: {},
     actions: {

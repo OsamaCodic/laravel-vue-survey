@@ -6,7 +6,7 @@
         <router-link :to="{ name: 'SurveyCreate' }" class="py-2 px-3 text-white bg-emerald-500 rounded-md hover:bg-emerald-600">
           Add New Survey 
           <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
           </svg> -->
         </router-link>
       </div>
